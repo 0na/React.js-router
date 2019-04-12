@@ -9,16 +9,14 @@ import CountryDetailsContainer from './containers/country-detail-container.compo
 import ContinentsContainer from './containers/continents-container.component';
 
 export default (
-    <Route path='/' component={ Navigation }>
-        <IndexRoute component={ Home } />
-        <Route exact path="/" component={ Home } />
+    <Route path='/' component={Navigation}>
+        <IndexRoute component={Home}/>
         <Route path='countries'>
-
-            <IndexRoute component={ CountryFlagContainer } />
-            <Route path='country/:id' component={ CountryDetailsContainer } />
+            <IndexRoute component={CountryFlagContainer}/>
+            <Route path='country/:id' component={CountryDetailsContainer}/>
         </Route>
-        <Route path='continents' component={ ContinentsContainer } />
-        <Route path='contact' component={ Contact } />
-        <Route path='*' component={ NotFound } />
+        <Route path='continents' component={ContinentsContainer}/>
+        <Route path='contact' component={Contact}/>
+        <Route path='*' component={NotFound}/>
     </Route>
 );
